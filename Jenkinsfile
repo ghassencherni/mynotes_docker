@@ -2,7 +2,7 @@ node {
 
     stage('Clone repository') {
     /* Let's make sure we have the repository cloned to our workspace */
-    git 'https://github.com/ghassencherni/wp_custom_docker'
+    git 'https://github.com/ghassencherni/notes_docker.git'
     
     }
     
