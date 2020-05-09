@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Create the migration plan 
-flask db init
-sleep 5
-
+echo "DB HOST is $DB_HOST"
 # Migrate the database
 flask db migrate
 sleep 5
