@@ -12,6 +12,10 @@ ENV FLASK_ENV development
 
 EXPOSE 80
 
+COPY docker-entrypoint.sh .
+
+RUN chmod 777 docker-entrypoint.sh
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+
 CMD ["flask","run","--host","0.0.0.0","--port","80"]
-
-
