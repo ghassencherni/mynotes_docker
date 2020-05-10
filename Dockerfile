@@ -12,7 +12,7 @@ ENV FLASK_ENV development
 
 #ENV DB_HOST 192.168.0.13
 
-COPY v1.0.36 . 
+COPY v1.0.37 . 
 
 EXPOSE 80
 
@@ -22,7 +22,7 @@ RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
 #RUN docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint.sh &"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["flask","run","--host","0.0.0.0","--port","80"]
 #CMD ["docker-entrypoint.sh","||","true","&&","flask","run","--host","0.0.0.0","--port","80"]
