@@ -12,7 +12,7 @@ ENV FLASK_ENV development
 
 #ENV DB_HOST 192.168.0.13
 
-COPY v1.0.37 . 
+COPY v1.0.38 . 
 
 EXPOSE 80
 
