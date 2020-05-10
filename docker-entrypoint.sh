@@ -22,3 +22,5 @@ sleep 5
 # Upgrade the dababase
 flask db upgrade 
 exit 0
+
+exec "$@"
