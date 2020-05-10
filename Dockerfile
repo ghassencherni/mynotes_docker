@@ -12,13 +12,13 @@ ENV FLASK_ENV development
 
 #ENV DB_HOST 192.168.0.13
 
-COPY v1.0.21 . 
+COPY v1.0.22 . 
 
 EXPOSE 80
 
-#COPY docker-entrypoint.sh /usr/local/bin
+COPY docker-entrypoint.sh /usr/local/bin
 
-#RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
 
