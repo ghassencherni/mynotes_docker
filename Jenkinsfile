@@ -11,7 +11,7 @@ node {
         sh """
         docker login -u="$USERNAME" -p="$PASSWORD" registry.gitlab.com
         echo "Building version v1.0.${env.BUILD_NUMBER}"
-        docker build -t registry.gitlab.com/myartifakt/mynotes .
+        docker build -t registry.gitlab.com/myartifakt/mynotes:latest .
         docker build -t registry.gitlab.com/myartifakt/mynotes:v1.0.${env.BUILD_NUMBER} .
         docker push registry.gitlab.com/myartifakt/mynotes:v1.0.${env.BUILD_NUMBER}
         docker push registry.gitlab.com/myartifakt/mynotes:latest
