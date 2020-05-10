@@ -4,11 +4,13 @@ RUN git clone https://github.com/ghassencherni/notes.git
 
 WORKDIR notes
 
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
-#ENV FLASK_APP /notes
+ENV FLASK_APP /notes
 
-#ENV FLASK_ENV development
+ENV FLASK_ENV development
+
+#ENV DB_HOST 192.168.0.13
 
 
 EXPOSE 80
@@ -18,5 +20,5 @@ EXPOSE 80
 #RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["bash"]
-#CMD ["flask","run","--host","0.0.0.0","--port","80"]
+
+CMD ["flask","run","--host","0.0.0.0","--port","80"]
