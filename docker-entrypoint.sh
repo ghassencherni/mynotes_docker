@@ -1,13 +1,24 @@
 #!/bin/bash
 
-echo "DB HOST is $DB_HOST";
-flask db init || true
-sleep 5
+flask db init
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+  echo success
+else
+  echo "DB already configured"; exit 0
+fi
 
+sleep 5
 # Migrate the database
-flask db migrate || true
+flask db migrate
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+  echo success
+else
+  echo "DB already configured"; exit 0
+fi
 sleep 5
 
 # Upgrade the dababase
-flask db upgrade || true
+flask db upgrade 
 exit 0
