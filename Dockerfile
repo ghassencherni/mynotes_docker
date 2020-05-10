@@ -17,6 +17,6 @@ COPY docker-entrypoint.sh /usr/local/bin
 
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["flask","run","--host","0.0.0.0","--port","80"]
