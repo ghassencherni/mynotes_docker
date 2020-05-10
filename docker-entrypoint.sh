@@ -10,4 +10,4 @@ sleep 5
 
 # Upgrade the dababase
 flask db upgrade || true
-
+exit 0
