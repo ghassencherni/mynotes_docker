@@ -18,5 +18,5 @@ EXPOSE 80
 #RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
-
+CMD ["bash"]
 #CMD ["flask","run","--host","0.0.0.0","--port","80"]
